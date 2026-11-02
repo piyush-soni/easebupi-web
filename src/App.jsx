@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-async function call(path, method = 'GET', body) {
+const call = async (path, method = 'GET', body) => {
   const r = await fetch(path, {
     method,
     headers: body ? { 'Content-Type': 'application/json' } : {},
